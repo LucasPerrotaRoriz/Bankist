@@ -1,15 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+    --color-primary: #5ec576;
+    --color-secondary: #ffcb03;
+    --color-tertiary: #ff585f;
+    --color-primary-darker: #4bbb7d;
+    --color-secondary-darker: #ffbb00;
+    --color-tertiary-darker: #fd424b;
+    --color-primary-opacity: #5ec5763a;
+    --color-secondary-opacity: #ffcd0331;
+    --color-tertiary-opacity: #ff58602d;
+    --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+    --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  }
+
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+    background-color: rgb(243, 243, 243);
+    color: rgb(68, 68, 68);
 }
+
+.section {
+    padding: 15rem 3rem;
+    border-top: 1px solid rgb(221, 221, 221);
+
+    transition: transform 1s, opacity 1s;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-inline: 3rem;
+}
+
+.logo {
+    height: 4.8rem;
+    transition: all .3s;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9.6rem;
+    width: 100%;
+    padding-inline: 6rem;
+    z-index: 10;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav__item {
+    margin-inline-start: 4rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+   font-size: 1.8rem;
+   font-weight: 400;
+   text-decoration: none;
+   color: inherit;
+   transition: all .4s;
+}
+
+.nav__link--btn:link,
+.nav__link--btn:visited {
+    padding: 1rem 2.5rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--color-primary);
+}
+
+.nav__link--btn:hover,
+.nav__link--btn:active {
+    background-color: var(--color-primary-darker);
+}
+
+/* HERO */
+
+
